@@ -55,78 +55,84 @@ namespace quizersteller2
             // 
             // txt1
             // 
-            this.txt1.Location = new System.Drawing.Point(228, 126);
+            this.txt1.Location = new System.Drawing.Point(225, 130);
+            this.txt1.Multiline = true;
             this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(514, 31);
+            this.txt1.Size = new System.Drawing.Size(582, 60);
             this.txt1.TabIndex = 0;
             // 
             // txt2
             // 
-            this.txt2.Location = new System.Drawing.Point(228, 179);
+            this.txt2.Location = new System.Drawing.Point(225, 201);
+            this.txt2.Multiline = true;
             this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(514, 31);
+            this.txt2.Size = new System.Drawing.Size(582, 60);
             this.txt2.TabIndex = 1;
             // 
             // txt3
             // 
-            this.txt3.Location = new System.Drawing.Point(228, 229);
+            this.txt3.Location = new System.Drawing.Point(225, 270);
+            this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
-            this.txt3.Size = new System.Drawing.Size(514, 31);
+            this.txt3.Size = new System.Drawing.Size(582, 60);
             this.txt3.TabIndex = 2;
             // 
             // txt4
             // 
-            this.txt4.Location = new System.Drawing.Point(228, 277);
+            this.txt4.Location = new System.Drawing.Point(225, 342);
+            this.txt4.Multiline = true;
             this.txt4.Name = "txt4";
-            this.txt4.Size = new System.Drawing.Size(514, 31);
+            this.txt4.Size = new System.Drawing.Size(582, 60);
             this.txt4.TabIndex = 3;
             // 
             // txt5
             // 
-            this.txt5.Location = new System.Drawing.Point(228, 330);
+            this.txt5.Location = new System.Drawing.Point(225, 409);
+            this.txt5.Multiline = true;
             this.txt5.Name = "txt5";
-            this.txt5.Size = new System.Drawing.Size(514, 31);
+            this.txt5.Size = new System.Drawing.Size(582, 60);
             this.txt5.TabIndex = 4;
             // 
             // txt6
             // 
-            this.txt6.Location = new System.Drawing.Point(228, 379);
+            this.txt6.Location = new System.Drawing.Point(225, 475);
+            this.txt6.Multiline = true;
             this.txt6.Name = "txt6";
-            this.txt6.Size = new System.Drawing.Size(514, 31);
+            this.txt6.Size = new System.Drawing.Size(582, 60);
             this.txt6.TabIndex = 5;
             // 
             // txtausgabe
             // 
-            this.txtausgabe.Location = new System.Drawing.Point(99, 569);
+            this.txtausgabe.Location = new System.Drawing.Point(857, 19);
             this.txtausgabe.Name = "txtausgabe";
             this.txtausgabe.ReadOnly = true;
-            this.txtausgabe.Size = new System.Drawing.Size(612, 147);
+            this.txtausgabe.Size = new System.Drawing.Size(735, 748);
             this.txtausgabe.TabIndex = 6;
             this.txtausgabe.Text = "";
             // 
             // txtfrage
             // 
-            this.txtfrage.Location = new System.Drawing.Point(228, -1);
+            this.txtfrage.Location = new System.Drawing.Point(225, 12);
             this.txtfrage.Multiline = true;
             this.txtfrage.Name = "txtfrage";
-            this.txtfrage.Size = new System.Drawing.Size(514, 88);
+            this.txtfrage.Size = new System.Drawing.Size(582, 60);
             this.txtfrage.TabIndex = 7;
             this.txtfrage.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(228, 505);
+            this.button1.Location = new System.Drawing.Point(225, 616);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 34);
+            this.button1.Size = new System.Drawing.Size(220, 60);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Create JSON";
+            this.button1.Text = "JSON Vorschau Quiz";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // chk1
             // 
             this.chk1.AutoSize = true;
-            this.chk1.Location = new System.Drawing.Point(101, 126);
+            this.chk1.Location = new System.Drawing.Point(101, 130);
             this.chk1.Name = "chk1";
             this.chk1.Size = new System.Drawing.Size(123, 29);
             this.chk1.TabIndex = 9;
@@ -136,7 +142,7 @@ namespace quizersteller2
             // chk2
             // 
             this.chk2.AutoSize = true;
-            this.chk2.Location = new System.Drawing.Point(101, 177);
+            this.chk2.Location = new System.Drawing.Point(99, 203);
             this.chk2.Name = "chk2";
             this.chk2.Size = new System.Drawing.Size(121, 29);
             this.chk2.TabIndex = 10;
@@ -146,7 +152,7 @@ namespace quizersteller2
             // chk3
             // 
             this.chk3.AutoSize = true;
-            this.chk3.Location = new System.Drawing.Point(99, 227);
+            this.chk3.Location = new System.Drawing.Point(99, 268);
             this.chk3.Name = "chk3";
             this.chk3.Size = new System.Drawing.Size(122, 29);
             this.chk3.TabIndex = 11;
@@ -156,7 +162,7 @@ namespace quizersteller2
             // chk4
             // 
             this.chk4.AutoSize = true;
-            this.chk4.Location = new System.Drawing.Point(101, 277);
+            this.chk4.Location = new System.Drawing.Point(101, 342);
             this.chk4.Name = "chk4";
             this.chk4.Size = new System.Drawing.Size(124, 29);
             this.chk4.TabIndex = 12;
@@ -166,7 +172,7 @@ namespace quizersteller2
             // chk5
             // 
             this.chk5.AutoSize = true;
-            this.chk5.Location = new System.Drawing.Point(101, 330);
+            this.chk5.Location = new System.Drawing.Point(99, 409);
             this.chk5.Name = "chk5";
             this.chk5.Size = new System.Drawing.Size(120, 29);
             this.chk5.TabIndex = 13;
@@ -176,7 +182,7 @@ namespace quizersteller2
             // chk6
             // 
             this.chk6.AutoSize = true;
-            this.chk6.Location = new System.Drawing.Point(101, 379);
+            this.chk6.Location = new System.Drawing.Point(99, 475);
             this.chk6.Name = "chk6";
             this.chk6.Size = new System.Drawing.Size(120, 29);
             this.chk6.TabIndex = 14;
@@ -194,7 +200,7 @@ namespace quizersteller2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(507, 505);
+            this.button2.Location = new System.Drawing.Point(582, 616);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(225, 34);
             this.button2.TabIndex = 16;
@@ -214,7 +220,7 @@ namespace quizersteller2
             // chk7
             // 
             this.chk7.AutoSize = true;
-            this.chk7.Location = new System.Drawing.Point(99, 431);
+            this.chk7.Location = new System.Drawing.Point(101, 541);
             this.chk7.Name = "chk7";
             this.chk7.Size = new System.Drawing.Size(123, 29);
             this.chk7.TabIndex = 18;
@@ -223,14 +229,15 @@ namespace quizersteller2
             // 
             // txt7
             // 
-            this.txt7.Location = new System.Drawing.Point(228, 431);
+            this.txt7.Location = new System.Drawing.Point(225, 541);
+            this.txt7.Multiline = true;
             this.txt7.Name = "txt7";
-            this.txt7.Size = new System.Drawing.Size(514, 31);
+            this.txt7.Size = new System.Drawing.Size(582, 60);
             this.txt7.TabIndex = 19;
             // 
             // txtspeicher
             // 
-            this.txtspeicher.Location = new System.Drawing.Point(22, 747);
+            this.txtspeicher.Location = new System.Drawing.Point(37, 722);
             this.txtspeicher.Name = "txtspeicher";
             this.txtspeicher.Size = new System.Drawing.Size(750, 31);
             this.txtspeicher.TabIndex = 21;
@@ -243,7 +250,7 @@ namespace quizersteller2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 802);
+            this.ClientSize = new System.Drawing.Size(1691, 816);
             this.Controls.Add(this.txtspeicher);
             this.Controls.Add(this.txt7);
             this.Controls.Add(this.chk7);
@@ -267,6 +274,7 @@ namespace quizersteller2
             this.Controls.Add(this.txt1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

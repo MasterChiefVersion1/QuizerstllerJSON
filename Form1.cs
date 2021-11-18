@@ -14,6 +14,7 @@ namespace quizersteller2
 {
     public partial class Form1 : Form
     {
+        FrageKlasse Quiz = new FrageKlasse();
         public Form1()
         {
             InitializeComponent();
@@ -46,26 +47,64 @@ namespace quizersteller2
 
 
 
-
+           
 
             FrageKlasse.Frageblock Frageblock1 = new FrageKlasse.Frageblock();
-            Frageblock1.question.Text = Frage;
+
+         
 
 
-            if (chk1.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(true); }
+            if (chk1.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
+            if (chk2.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
+            if (chk3.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
+            if (chk4.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
+            if (chk5.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
+            if (chk6.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
+            if (chk7.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
+
+
+
+            Question question = new Question(1, Frage);
+            Frageblock1.question.Add(question);
+
+            Choicelabel labelA = new Choicelabel("A", A);
+            Choicelabel labelB = new Choicelabel("B", B);
+            Choicelabel labelC = new Choicelabel("C", C);
+            Choicelabel labelD = new Choicelabel("D", D);
+            Choicelabel labelE = new Choicelabel("E", E);
+            Choicelabel labelF = new Choicelabel("F", F);
+            Choicelabel labelG = new Choicelabel("G", G);
+
+
+
+            Frageblock1.choices.Add(labelA);
+            Frageblock1.choices.Add(labelB);
+            Frageblock1.choices.Add(labelC);
+            Frageblock1.choices.Add(labelD);
+            if (E != "") { Frageblock1.choices.Add(labelE); }
+            if (F != "") { Frageblock1.choices.Add(labelF); }
+            if (G != "") { Frageblock1.choices.Add(labelG); }
+
+            if (G == "") { Frageblock1.answer.RemoveAt(6); }
+            if (F == "") { Frageblock1.answer.RemoveAt(5); }
+            if (E == "") { Frageblock1.answer.RemoveAt(4); }
 
 
 
 
 
+            Quiz.test.Add(Frageblock1);
+           
 
 
-
-            string JSON = JsonConvert.SerializeObject(Frageblock1, Formatting.Indented);
-
-              txtausgabe.Text += JSON;
+        
 
 
+            string JSON = JsonConvert.SerializeObject(Quiz,Formatting.Indented);
+
+            txtausgabe.Text = JSON;
+
+            
 
 
         }
@@ -93,8 +132,19 @@ namespace quizersteller2
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+
+            
 
 
+        }
     }
 
     

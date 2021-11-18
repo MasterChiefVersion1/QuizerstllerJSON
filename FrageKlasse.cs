@@ -4,20 +4,49 @@ using System.Text;
 
 namespace quizersteller2
 {
-    class FrageKlasse
+    public class FrageKlasse
     {
+
+        public author author;
+        public string createdAt = "2019-03-05T08:06:29.168Z";
+        public string title = "Übungsexam";
+        public string description = "";
+        public string code = "000-000";
+        public int pass = 60;
+        public int time = 60;
+        public string image = "";
+        public List<string> cover { get; }
+
+
+
+        public List<Frageblock> test { get; set; }
+
+        public FrageKlasse()
+        {
+            test = new List<Frageblock>();
+            author = new author();
+            cover = new List<string>();
+        }
+
+
         public class Frageblock
         {
 
             public List<bool> answer { get; set; }
-            public Question question { get; set; }
+            public List<Question> question { get; set; }
 
-            public Explanation explanation;
+
+
+            public List<Choicelabel> choices { get; set; }
+
+            public List<Explanation> explanation;
 
             public Frageblock()
             {
-                this.question = new Question() { Text = "" };
-                this.explanation = new Explanation();
+                answer = new List<bool>();
+                question = new List<Question>();
+                choices = new List<Choicelabel>();
+                explanation = new List<Explanation>();  
             }
 
 
@@ -27,22 +56,7 @@ namespace quizersteller2
             public int variant = 1;
 
         }
-
-        public class Question
-        {
-            public int variant = 1;
-            public string Text { get; set; }
-
-        }
-
-        public class Explanation
-        {
-            public int variant = 1; public string text = "";
-        }
-
-        public class choices
-        {
-
-        }
     }
+
+   
 }
