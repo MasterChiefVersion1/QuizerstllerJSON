@@ -51,6 +51,7 @@ namespace quizersteller2
             this.txt7 = new System.Windows.Forms.TextBox();
             this.txtspeicher = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt1
@@ -121,7 +122,7 @@ namespace quizersteller2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(225, 616);
+            this.button1.Location = new System.Drawing.Point(123, 637);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 60);
             this.button1.TabIndex = 8;
@@ -200,9 +201,9 @@ namespace quizersteller2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(582, 616);
+            this.button2.Location = new System.Drawing.Point(371, 637);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 34);
+            this.button2.Size = new System.Drawing.Size(220, 60);
             this.button2.TabIndex = 16;
             this.button2.Text = "Speichern";
             this.button2.UseVisualStyleBackColor = true;
@@ -237,7 +238,7 @@ namespace quizersteller2
             // 
             // txtspeicher
             // 
-            this.txtspeicher.Location = new System.Drawing.Point(37, 722);
+            this.txtspeicher.Location = new System.Drawing.Point(47, 756);
             this.txtspeicher.Name = "txtspeicher";
             this.txtspeicher.Size = new System.Drawing.Size(750, 31);
             this.txtspeicher.TabIndex = 21;
@@ -246,11 +247,22 @@ namespace quizersteller2
             // 
             this.saveFileDialog1.Filter = "Text Format|*.txt";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(615, 637);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(220, 60);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "In vorhandenes Quiz speichern";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1691, 816);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.txtspeicher);
             this.Controls.Add(this.txt7);
             this.Controls.Add(this.chk7);
@@ -304,6 +316,7 @@ namespace quizersteller2
         private System.Windows.Forms.TextBox txt7;
         private System.Windows.Forms.TextBox txtspeicher;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
