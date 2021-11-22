@@ -15,7 +15,7 @@ namespace quizersteller2
     public partial class Form1 : Form
     {
         FrageKlasse Quiz = new FrageKlasse();
-        FrageKlasse.Frageblock Frageblock1 = new FrageKlasse.Frageblock();
+       
 
 
 
@@ -47,7 +47,7 @@ namespace quizersteller2
 
 
 
-
+             FrageKlasse.Frageblock Frageblock1 = new FrageKlasse.Frageblock();
 
 
 
@@ -144,6 +144,8 @@ namespace quizersteller2
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            FrageKlasse.Frageblock Frageblock1 = new FrageKlasse.Frageblock();
+
             if (txtausgabe.Text == "")
             { txtspeicher.Text = "Bitte klicke erst Create JSON um etwas zu speichern"; }
 
@@ -166,14 +168,30 @@ namespace quizersteller2
                     string JS = JsonConvert.SerializeObject(Quiz, Formatting.Indented);
                     txtausgabe.Text = JS;
                     File.WriteAllText(saveFileDialog.FileName, JS);
-
+                    
                 }
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            txt1.Text = "";
+            txt2.Text = "";
+            txt3.Text = "";
+            txt4.Text = "";
+            txt5.Text = "";
+            txt6.Text = "";
+            txt7.Text = "";
+            txtfrage.Text = "";
+
+
+
+        }
+
+        private void txtspeicher_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-
-    
-
-
 
 }
