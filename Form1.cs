@@ -15,7 +15,7 @@ namespace quizersteller2
     public partial class Form1 : Form
     {
         FrageKlasse Quiz = new FrageKlasse();
-       
+        
 
 
 
@@ -33,6 +33,8 @@ namespace quizersteller2
         public void button1_Click(object sender, EventArgs e)
         {
 
+            FrageKlasse.Frageblock Frageblock1 = new FrageKlasse.Frageblock();
+
             string A = txt1.Text;
             string B = txt2.Text;
             string C = txt3.Text;
@@ -43,20 +45,6 @@ namespace quizersteller2
             string Frage = txtfrage.Text;
 
 
-
-
-
-
-             FrageKlasse.Frageblock Frageblock1 = new FrageKlasse.Frageblock();
-
-
-
-
-           
-
-            
-
-         
 
 
             if (chk1.Checked == true) { Frageblock1.answer.Add(true); } else { Frageblock1.answer.Add(false); }
@@ -144,7 +132,7 @@ namespace quizersteller2
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            FrageKlasse.Frageblock Frageblock1 = new FrageKlasse.Frageblock();
+           
 
             if (txtausgabe.Text == "")
             { txtspeicher.Text = "Bitte klicke erst Create JSON um etwas zu speichern"; }
@@ -162,9 +150,16 @@ namespace quizersteller2
 
                     
                     string J = File.ReadAllText(saveFileDialog.FileName);
-                    txtausgabe.Text = J;
-                    Quiz = JsonConvert.DeserializeObject<FrageKlasse>(J);
-                    Quiz.test.Add(Frageblock1);
+
+                    FrageKlasse Q = new FrageKlasse();
+                    Q = JsonConvert.DeserializeObject<FrageKlasse>(J);
+                    
+                    foreach (object frageblock in Q.test)
+                    {
+                        Quiz.test.Add((FrageKlasse.Frageblock)frageblock);
+                    }
+                    
+                    
                     string JS = JsonConvert.SerializeObject(Quiz, Formatting.Indented);
                     txtausgabe.Text = JS;
                     File.WriteAllText(saveFileDialog.FileName, JS);
