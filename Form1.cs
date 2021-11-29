@@ -114,6 +114,7 @@ namespace quizersteller2
 
 
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
+                   saveFileDialog.Filter = "JSON Files|*.json";
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
 
@@ -144,11 +145,12 @@ namespace quizersteller2
 
 
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "JSON Files|*.json";
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                   // string JSON = JsonConvert.SerializeObject(Quiz, Formatting.Indented);
+                    // string JSON = JsonConvert.SerializeObject(Quiz, Formatting.Indented);
 
-                    
+                   
                     string J = File.ReadAllText(saveFileDialog.FileName);
 
                     FrageKlasse Q = new FrageKlasse();
@@ -156,7 +158,7 @@ namespace quizersteller2
                     
                     foreach (object frageblock in Q.test)
                     {
-                        Quiz.test.Add((FrageKlasse.Frageblock)frageblock);
+                        Quiz.test.Prepend((FrageKlasse.Frageblock)frageblock);
                     }
                     
                     
