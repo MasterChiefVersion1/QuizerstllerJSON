@@ -46,7 +46,8 @@ namespace quizersteller2
                 answer = new List<bool>();
                 question = new List<Question>();
                 choices = new List<Choicelabel>();
-                explanation = new List<Explanation>();  
+                explanation = new List<Explanation>();
+                question = new List<Question>();
             }
 
 
