@@ -55,7 +55,7 @@ namespace quizersteller2
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string JSON = JsonConvert.SerializeObject(Quiz, Formatting.Indented);
-                    File.AppendAllText(saveFileDialog.FileName, JSON);
+                    File.WriteAllText(saveFileDialog.FileName, JSON);
 
                 }
             }
@@ -200,6 +200,8 @@ namespace quizersteller2
             //eine Vorsichtsmaßnahme. Falls jemand mit den Buttons rumspielt bevor ein Quiz da ist
             if (Quiz.test.Count > 0)
             {
+                //deaktiviert den Frage hinzufügen Button
+                button5.Enabled = false;
                 //aktiviert die Buttons um ziwschen den Positionen zu switchen
                 button7.Enabled = true; button8.Enabled = true;
                 //die Stellle in der Testliste wird bestimmt, so dass sie nicht größer als die Liste und nicht kleiner 0 ist
@@ -368,6 +370,8 @@ namespace quizersteller2
                         button9.PerformClick();
                         //leert die Forlage
                         button4.PerformClick();
+                       //aktiviert die Frage hinzufügen Möglichkeit wieder
+                       button5.Enabled = true;
                     }
                 }
             }
