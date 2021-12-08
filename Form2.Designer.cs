@@ -48,8 +48,8 @@ namespace quizersteller2
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(466, 140);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Wenn du ein vorhandenes Dokument auswählst, wird dieses einfach erweitert. Du mus" +
-    "st nur bei ersetzen Ja, klicken (die Windows Info ist dumm)\r\n";
+            this.textBox1.Text = "Wenn du ein vorhandenes Quiz auswählst, wird dieses nicht überschreiben, du musst" +
+    " einfach ja klicken, Windows ist dumm";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1

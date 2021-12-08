@@ -57,6 +57,8 @@ namespace quizersteller2
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt1
@@ -112,7 +114,7 @@ namespace quizersteller2
             this.txtausgabe.Location = new System.Drawing.Point(857, 19);
             this.txtausgabe.Name = "txtausgabe";
             this.txtausgabe.ReadOnly = true;
-            this.txtausgabe.Size = new System.Drawing.Size(735, 748);
+            this.txtausgabe.Size = new System.Drawing.Size(735, 731);
             this.txtausgabe.TabIndex = 6;
             this.txtausgabe.Text = "";
             // 
@@ -127,11 +129,11 @@ namespace quizersteller2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(334, 723);
+            this.button1.Location = new System.Drawing.Point(313, 723);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 60);
             this.button1.TabIndex = 8;
-            this.button1.Text = "zu JSON formatieren";
+            this.button1.Text = "JSON Vorschau";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -206,7 +208,8 @@ namespace quizersteller2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(587, 696);
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(587, 723);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(220, 60);
             this.button2.TabIndex = 16;
@@ -247,11 +250,11 @@ namespace quizersteller2
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(587, 619);
+            this.button3.Location = new System.Drawing.Point(587, 630);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(220, 60);
             this.button3.TabIndex = 22;
-            this.button3.Text = "In vorhandenes Quiz speichern";
+            this.button3.Text = "JSON Quiz Datei laden";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -286,7 +289,7 @@ namespace quizersteller2
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(857, 789);
+            this.button6.Location = new System.Drawing.Point(857, 756);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(220, 60);
             this.button6.TabIndex = 0;
@@ -296,7 +299,8 @@ namespace quizersteller2
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1107, 789);
+            this.button7.Enabled = false;
+            this.button7.Location = new System.Drawing.Point(1101, 756);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(220, 60);
             this.button7.TabIndex = 26;
@@ -306,7 +310,8 @@ namespace quizersteller2
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(1358, 793);
+            this.button8.Enabled = false;
+            this.button8.Location = new System.Drawing.Point(1345, 756);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(220, 60);
             this.button8.TabIndex = 27;
@@ -314,11 +319,33 @@ namespace quizersteller2
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(313, 630);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(220, 60);
+            this.button9.TabIndex = 28;
+            this.button9.Text = "formatierte Vorschau";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(857, 822);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(220, 60);
+            this.button10.TabIndex = 29;
+            this.button10.Text = "Änderung bestätigen";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1691, 889);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -384,6 +411,8 @@ namespace quizersteller2
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 

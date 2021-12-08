@@ -6,7 +6,7 @@ namespace quizersteller2
 {
     public class FrageKlasse
     {
-
+        //der Kopfteil des Quizes
         public author author;
         public string createdAt = "2019-03-05T08:06:29.168Z";
         public string title = "Übungsexam";
@@ -18,9 +18,9 @@ namespace quizersteller2
         public List<string> cover { get; }
 
 
-
+        //test ist eine Liste der Fragen und ihrer Antworten, kurz eine Liste von Frageblöcken
         public List<Frageblock> test { get; set; }
-
+        //die Objekte werden an dieser Stelle schonmal instanziiert, das spart später Arbeit
         public FrageKlasse()
         {
             test = new List<Frageblock>();
@@ -28,7 +28,7 @@ namespace quizersteller2
             cover = new List<string>();
         }
 
-
+        //der Frageblock. Die Eigenschaften sind Listen, damit das ordentlich ins JSON formatiert wird
         public class Frageblock
         {
 
@@ -40,7 +40,7 @@ namespace quizersteller2
             public List<Choicelabel> choices { get; set; }
 
             public List<Explanation> explanation;
-
+            //hier wieder die Instanziierung
             public Frageblock()
             {
                 answer = new List<bool>();
@@ -53,7 +53,7 @@ namespace quizersteller2
 
            
 
-
+            //eine Variable die der Exam Simulator benötigt zum funktionieren
             public int variant = 1;
 
         }
